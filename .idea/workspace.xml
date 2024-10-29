@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89e80f57-f22e-4079-a10c-2ee410aaa683" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/work/ngochuyen/spring/controller/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/databases.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/util/json/JSONUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/work.ngochuyen.spring.controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/work/ngochuyen/spring/controller/UserControllerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +26,26 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-spring" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,11 +77,13 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Gradle.UserControllerTest.executor": "Run",
+    "Gradle.UserControllerTest.testCreateUser.executor": "Run",
     "Gradle.java-spring [:Application.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.ide.FileNotInSourceRootChecker.no.check": "true",
     "git-widget-placeholder": "feature/spring-restful",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/bachkhoahanoi/Ky_20241/Project1/java-spring",
+    "last_opened_file_path": "C:/bachkhoahanoi/Ky_20241/Project1/Vietdefi/java-spring",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -101,9 +128,34 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="UserControllerTest.testCreateUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;work.ngochuyen.spring.controller.UserControllerTest.testCreateUser&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UserControllerTest" />
+        <item itemvalue="Gradle.UserControllerTest.testCreateUser" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>

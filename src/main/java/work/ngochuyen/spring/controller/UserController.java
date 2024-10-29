@@ -1,8 +1,11 @@
 package work.ngochuyen.spring.controller;
 
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import work.ngochuyen.spring.model.User;
+import work.ngochuyen.spring.repository.UserRepository;
 
 
 import java.util.*;
@@ -21,58 +24,61 @@ import java.util.concurrent.ConcurrentHashMap;
 public class UserController {
 
 
-    // In-memory storage for demo purposes
-    private final Map<Long, User> userStorage = new ConcurrentHashMap<>();
+    private final UserRepository userRepository;
+
+
+    // Constructor injection of UserRepository
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
 
     // 1. Create a new User (POST)
     @PostMapping
-    // Chuyên biệt hóa @RequestMapping cho các yêu cầu HTTP POST.
-    //Ứng dụng: Thường được sử dụng để tạo mới một tài nguyên.
-    public User createUser(@RequestBody User user) {
-        userStorage.put(user.getUserId(), user);
-        return user;
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User savedUser = userRepository.save(user);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedUser); // Trả về 201 Created
     }
 
 
     // 2. Get a User by ID (GET)
-    //Chuyên biệt hóa @RequestMapping cho các yêu cầu HTTP GET.
-    //Ứng dụng: Dùng để lấy dữ liệu từ server.
     @GetMapping("/{id}")
-    public User getUserById(@PathVariable Long id) {
-        return userStorage.getOrDefault(id, null);
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("User not found with ID: " + id));
+        return ResponseEntity.ok(user); // Trả về 200 OK
     }
 
 
     // 3. Get all Users (GET)
     @GetMapping
-    public List<User> getAllUsers() {
-        return new ArrayList<>(userStorage.values());
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users = userRepository.findAll();
+        return ResponseEntity.ok(users); // Trả về 200 OK
     }
 
 
     // 4. Update a User by ID (PUT)
-    //Chức năng: Chuyên biệt hóa @RequestMapping cho các yêu cầu HTTP PUT.
-    //Ứng dụng: Dùng để cập nhật tài nguyên đã tồn tại.
     @PutMapping("/{id}")
-    public User updateUser(@PathVariable Long id, @RequestBody User updatedUser) {
-        if (userStorage.containsKey(id)) {
-            userStorage.put(id, updatedUser);
-            return updatedUser;
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User updatedUser) {
+        if (!userRepository.existsById(id)) {
+            throw new NoSuchElementException("User not found with ID: " + id);
         }
-        throw new NoSuchElementException("User not found with ID: " + id);
+        updatedUser.setUserId(id); // Set the ID to the updated user
+        User savedUser = userRepository.save(updatedUser);
+        return ResponseEntity.ok(savedUser); // Trả về 200 OK
     }
 
 
     // 5. Delete a User by ID (DELETE)
-    //Chuyên biệt hóa @RequestMapping cho các yêu cầu HTTP DELETE.
-    //Ứng dụng: Dùng để xóa tài nguyên
     @DeleteMapping("/{id}")
-    public String deleteUser(@PathVariable Long id) {
-        if (userStorage.remove(id) != null) {
-            return "User with ID " + id + " deleted successfully.";
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+        if (userRepository.existsById(id)) {
+            userRepository.deleteById(id);
+            return ResponseEntity.ok("User with ID " + id + " deleted successfully."); // Trả về 200 OK
         }
-        return "User not found.";
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found."); // Trả về 404 Not Found
     }
+
 }
 

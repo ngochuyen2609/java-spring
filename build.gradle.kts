@@ -31,12 +31,15 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
 }
 // Cấu hình chạy thử nghiệm
 val mainClassName = "work.ngochuyen.spring.Application"
 tasks.withType<JavaExec> {
     mainClass.set(mainClassName)
 }
+
 tasks.withType<Test> {
     useJUnitPlatform() // Sử dụng JUnit Platform
 }
