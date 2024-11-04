@@ -1,4 +1,4 @@
-package work.ngochuyen.spring.auth.dto;
+package work.ngochuyen.spring.auth.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,10 +8,12 @@ import jakarta.validation.constraints.NotBlank;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegisterRequest {
+public class LoginRequest {//Authentication
+
     @NotBlank(message = "Username is mandatory")
     private String username;
+
     @NotBlank(message = "Password is mandatory")
+    //@Size(min=8, message = "Password must be longer than 8")
     private String password;
 }
-

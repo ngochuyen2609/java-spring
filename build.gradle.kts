@@ -5,9 +5,8 @@ plugins {
     id("io.freefair.lombok") version "8.10.2"
 }
 
-group = "ngoc.huyen.it"
-version = "1.0-SNAPSHOT"
-
+group = "work.ngochuyen"
+version = "0.0.1-SNAPSHOT"
 
 java {
     toolchain {
@@ -41,6 +40,10 @@ dependencies {
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    //maptruct
+    implementation ("org.mapstruct:mapstruct:1.5.3.Final")
+    annotationProcessor ("org.mapstruct:mapstruct-processor:1.5.3.Final")
 }
 
 tasks.withType<Test> {
@@ -50,7 +53,4 @@ tasks.withType<JavaCompile> {
     options.compilerArgs.addAll(listOf("-Xlint:deprecation", "-Xlint:unchecked"))
 }
 
-val mainClassName = "work.ngochuyen.spring.Application" // Khai báo chính xác
-tasks.withType<JavaExec> {
-    mainClass.set(mainClassName) // Sử dụng mainClass.set nếu cần
-}
+

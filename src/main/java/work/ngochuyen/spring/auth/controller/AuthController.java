@@ -1,20 +1,22 @@
 package work.ngochuyen.spring.auth.controller;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-import work.ngochuyen.spring.auth.dto.LoginRequest;
-import work.ngochuyen.spring.auth.dto.RegisterRequest;
+import work.ngochuyen.spring.auth.dto.request.LoginRequest;
+import work.ngochuyen.spring.auth.dto.request.RegisterRequest;
 import work.ngochuyen.spring.auth.service.UserService;
 import work.ngochuyen.spring.common.dto.BaseResponse;
 
 @RestController
 @RequestMapping("/v1/auth")
-public class AuthController {
+@RequiredArgsConstructor
+public class AuthController {//quan ly mapping
     @Autowired
     UserService userService;
     @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -26,6 +28,7 @@ public class AuthController {
     public BaseResponse<?> login(@Valid  @RequestBody LoginRequest loginRequest) {
         return userService.login(loginRequest);
     }
+
     @GetMapping("/verify")
     public BaseResponse<?> verify() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

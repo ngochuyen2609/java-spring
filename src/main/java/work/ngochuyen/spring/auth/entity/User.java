@@ -12,8 +12,9 @@ import lombok.NoArgsConstructor;
 @Table(name = "spring_user") // Table name in database
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long userId;
+    @GeneratedValue(strategy = GenerationType.AUTO)//UUID ,AUTO
+    private Long userId;//danh dau day la id va tu duoc tang gia tri
+
     @Column(unique = true, nullable = false, length = 64)
     private String username;
     @Column(length = 512)

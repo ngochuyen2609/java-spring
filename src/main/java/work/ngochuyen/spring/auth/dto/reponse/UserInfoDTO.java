@@ -1,4 +1,4 @@
-package work.ngochuyen.spring.auth.dto;
+package work.ngochuyen.spring.auth.dto.reponse;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

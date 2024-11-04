@@ -1,4 +1,4 @@
-package work.ngochuyen.spring.common.exeption;
+package work.ngochuyen.spring.common.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
@@ -41,6 +41,7 @@ public class GlobalExceptionHandler {
         );
         return response;
     }
+
     @ExceptionHandler(Exception.class)
     public BaseResponse<ErrorResponse> handleException(Exception exception) {
         ErrorResponse errorResponse = new ErrorResponse(1, "system_error");

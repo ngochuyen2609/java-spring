@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-import work.ngochuyen.spring.auth.dto.UserDTO;
+import work.ngochuyen.spring.auth.dto.reponse.UserDTO;
 import work.ngochuyen.spring.auth.repository.UserRepository;
 
 import javax.crypto.spec.SecretKeySpec;

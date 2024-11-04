@@ -5,31 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89e80f57-f22e-4079-a10c-2ee410aaa683" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/databases.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/convert/UserConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/UserInfoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/dto/BaseResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/dto/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/exeption/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/security/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/util/json/JSONUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/work/ngochuyen/spring/auth/AuthControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-10-29.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log.2024-10-30.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/convert/UserConvert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/request/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/request/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/reponse/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/UserInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/dto/reponse/UserInfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/auth/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/exeption/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/work/ngochuyen/spring/common/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/work/ngochuyen/spring/auth/AuthControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/work/ngochuyen/spring/auth/AuthControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +59,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/spring-restful" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,14 +85,23 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.Build java-spring.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.java-spring [:Application.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feature/spring-security",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/bachkhoahanoi/Ky_20241/Project1/java-spring",
+    "last_opened_file_path": "C:/bachkhoahanoi/Ky_20241/Project1/Vietdefi/java-spring",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+  },
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\ADMIN\\.gradle"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Application.Application">
